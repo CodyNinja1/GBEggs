@@ -7,7 +7,9 @@ class CGameCtnChallenge:
         if Reader.ClassId != 0x3043000:
             raise GbxException("File not suitable for CGameCtnChallenge")
         else:
-            self.Thumbnail = self.Reader.GetHeaderChunkById(0x3043007).Data
+            ThumbnailChunk = self.Reader.GetHeaderChunkById(0x3043007)
+            if ThumbnailChunk != None:
+                self.Thumbnail = ThumbnailChunk.Data
 
     @property
     def ThumbnailPillow(self):
