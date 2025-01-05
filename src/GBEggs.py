@@ -8,7 +8,7 @@ class GbxChunk:
     def __init__(self, ChunkId: int, ChunkSize: int):
         self.ChunkId: int = ChunkId
         self.ChunkSize: int = ChunkSize & 0x7FFFFFFF
-        self.IsHeavy: int = (ChunkSize & 0x80000000) == 2147483648
+        self.IsHeavy: bool = (ChunkSize & 0x80000000) == 2147483648
         self.Data: bytes = None
         self.DataIo: BytesIO = None
         self.DataIoWrite: BytesIO = BytesIO()
