@@ -98,7 +98,6 @@ class GbxReader:
             raise NotImplementedError("sowwy :3c")
     
     def ParseBody(self):
-        # print(f"BODY {"UN" if not self.IsByteCompressionBodyCompressed else ""}COMPRESSED")
         self.DecompressedSize: int | None = None
         self.CompressedSize: int | None = None
         self.BodyData: bytes | None = None
