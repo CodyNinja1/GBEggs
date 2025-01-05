@@ -44,10 +44,10 @@ class GbxChunk:
     def WriteUint16(self, Uint: int):
         self.WriteBytesLE(Uint.to_bytes(2))
 
-    def WriteUint32(self, Uint: int) -> int:
+    def WriteUint32(self, Uint: int):
         self.WriteBytesLE(Uint.to_bytes(4))
 
-    def WriteString(self, Str: str) -> str:
+    def WriteString(self, Str: str):
         EncodedStr = Str.encode("utf-8")
         self.WriteUint32(len(EncodedStr))
         self.WriteBytesBE(EncodedStr)
