@@ -1,4 +1,4 @@
-### Python port of the minilzo source version 2.06 by schadocalex
+### Python port of the minilzo source version 2.06 by schadocalex (at https://github.com/schadocalex/gbx-py/blob/main/src/mini_lzo.py)
 
 # /* minilzo.c -- mini subset of the LZO real-time data compression library
 
