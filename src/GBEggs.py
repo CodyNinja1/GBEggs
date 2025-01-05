@@ -73,7 +73,7 @@ class GbxReader:
             self.IsByteCompressionRefTableCompressed: bool = self.ReadBytesLE(1) == b'C'
             self.IsByteCompressionBodyCompressed: bool = self.ReadBytesLE(1) == b'C'
             if self.GbxVerison >= 4:
-                self.ReadBytesLE(1) # HACK: skip the extra R on version 6 Gbxs
+                self.ReadBytesLE(1) # HACK: skip the extra R
 
             self.ClassId: int = self.ReadUint32()
 
