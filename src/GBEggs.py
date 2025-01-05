@@ -4,13 +4,6 @@ from io import BytesIO
 class GbxException(Exception):
     pass
 
-class GbxNod:
-    def __init__(self, Data: bytes):
-        self.Data = Data
-    
-    def __repr__(self):
-        return f"(GbxNod [{self.Data[:10]}])\n"
-
 class GbxChunk:
     def __init__(self, ChunkId: int, ChunkSize: int):
         self.ChunkId: int = ChunkId
